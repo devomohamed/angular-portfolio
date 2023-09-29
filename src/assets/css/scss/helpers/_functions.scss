@@ -1,0 +1,7 @@
+@function colorChange($color){
+  @return $color
+};
+
+@function calculateSpace($space , $percentage){
+  @return 70%
+}

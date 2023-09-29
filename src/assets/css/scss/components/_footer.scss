@@ -1,0 +1,39 @@
+footer{
+  .container{
+    h2{
+      text-align: center;
+      color: $gradient_color-1;
+    }
+    .links-footer{
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      li{
+        a{color: $white_color;text-decoration: none;}
+      }
+    }
+    .social-links{
+      gap: 1rem;
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: center;
+      li{
+        a{
+          color: $white_color;
+          // svg{
+          //   width: 24px;
+          //   height: 24px;
+          //   background-color: $white_color;
+          // }
+        }
+      }
+    }
+    p{
+      text-align: center;
+      color: $white_color;
+      font-size: .9rem;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.container-experience{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  .experience{
+    transition: .3s;
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+      transform: translateY(-5px);
+    }
+    &.left-bulit{
+      &::after{
+        content: "";
+        position: absolute;
+        align-self: baseline;
+        border-style: solid;
+        border-width: 2px;
+        padding: 4px;
+        border-radius: 50%;
+        box-shadow: none;
+        // margin: 11.5px 0px;
+        background-color: transparent;
+        border-color: rgb(156, 39, 176);
+        left: -30px;
+        top: 0;
+        z-index: 1;
+  
+      }
+      &:last-of-type::before{
+        display: none;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        box-shadow: none;
+        background-color: rgb(156, 39, 176);
+        height: 100%;
+        left: -26px;
+        top: 20px;
+        width: 2px;
+        z-index: 1;
+      }
+    }
+    &.right-bulit{
+      &::after{
+        content: "";
+        position: absolute;
+        align-self: baseline;
+        border-style: solid;
+        border-width: 2px;
+        padding: 4px;
+        border-radius: 50%;
+        box-shadow: none;
+        // margin: 11.5px 0px;
+        background-color: transparent;
+        border-color: rgb(156, 39, 176);
+        right: -30px;
+        top: 0;
+        z-index: 1;
+  
+      }
+      &:last-of-type::before{
+        display: none;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        box-shadow: none;
+        background-color: rgb(156, 39, 176);
+        height: 100%;
+        right: -26px;
+        top: 20px;
+        width: 2px;
+        z-index: 1;
+      }
+    }
+    // margin-left: 30px;
+    // min-width: 60%;
+    max-width: 70%;
+    border: 0.1px solid rgb(48, 110, 232);
+    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    border-radius: 10px;
+    color: $white_color-2;
+    padding: 1.2rem;
+    position: relative;
+    
+    .head{
+      display: flex;
+      align-items: center;
+      
+      img{
+        border-radius: 10px;
+      }
+      .right{
+        margin-left: .7rem;
+        .job-title{
+          @include textStyle(18px,600,$white_color-2);
+        }
+        .company{
+          @include textStyle(14px,500,$white_color-2);
+        }
+        .date{
+          @include textStyle(12px,400,$white_color-2);
+          .start-date{}
+          .end-date{}
+        }
+      }
+    }
+    .info{
+      margin: 1rem 0;
+    }
+    .skills-use{
+      display: flex;
+      .title{}
+      .skills{
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: circle;
+        gap: 1.7rem;
+        li{
+          // margin: 0 1rem;
+        }
+      }
+    }
+  }
+}

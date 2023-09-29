@@ -1,0 +1,62 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // font-family: Montserrat,sans-serif;
+  font-family: Poppins, sans-serif;
+}
+
+html, body{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Poppins,sans-serif;
+  padding-top: 68px;
+  background-color: #211C2B;
+}
+
+::-webkit-scrollbar {
+  height: 80px;
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #575c66;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222a35;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.white-link{
+  color: $white_color;
+  text-decoration: none;
+}
+
+section .top {
+  margin-bottom: 20px;
+  .title{
+    @include textStyle(42px, 600, $white_color-1);
+  }
+  p{
+    @include textStyle(18px, 600, $white_color-2);
+    margin-top: 10px;
+    margin-bottom: 3rem;
+    font-family: Poppins,sans-serif;
+  }
+}
+
+
+.hover-white-link{
+  @extend .white-link;
+  transition: $delay-transition-3;
+  &:hover{
+    color: colorChange($gradient_color-1);
+  }
+}
+

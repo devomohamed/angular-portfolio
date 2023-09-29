@@ -1,0 +1,48 @@
+.container-contact{
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgb(23, 23, 33);
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 10px;
+  h3{margin-bottom: 1rem;color: $white_color;}
+  form{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;  
+    input{
+
+      flex: 1 1 0%;
+      background-color: transparent;
+      border: 1px solid rgb(177, 178, 179);
+      outline: none;
+      font-size: 18px;
+      color: rgb(242, 243, 244);
+      border-radius: 12px;
+      padding: 12px 16px;
+    }
+    #message{
+      width: 100% !important;
+      resize: none;
+      flex: 1 1 0%;
+      background-color: transparent;
+      border: 1px solid rgb(177, 178, 179);
+      outline: none;
+      font-size: 18px;
+      color: rgb(242, 243, 244);
+      border-radius: 12px;
+      padding: 12px 16px;
+    }
+    button{
+      margin-top: 0 !important;
+      width: fit-content;
+      @extend .downloadCvButton;
+      width: 100%;
+      margin: 1.5rem auto;
+      cursor: pointer;
+      &:hover{
+        transform: none;
+      }
+    }
+  }
+}

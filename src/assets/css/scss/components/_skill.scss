@@ -1,0 +1,17 @@
+.tool{
+  display: flex;
+  width: fit-content;
+  border: 1px solid $white_color-2;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  .name{
+    color: $white_color-2;
+  }
+  img{
+    width: 24px;
+    height: 24px;
+  }
+  .name{
+    margin-left: .5rem;
+  }
+}

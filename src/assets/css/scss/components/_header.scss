@@ -1,0 +1,41 @@
+header{
+  background-color: rgb(25, 25, 36);
+  padding: 10px 0;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  left: 0;
+  top: 0;
+  .container{
+    position: relative;
+    a{
+      
+      span{
+        color: $white_color;
+      }
+      svg{
+        color: $white_color;
+      }
+      text-decoration: none;
+    }
+    ul{
+      li{
+        padding: 0 10px;
+        font-weight: 500;
+        a{
+          @extend .hover-white-link;
+        }
+      }
+    }
+  }
+}
+
+@include devices(largeScreen){
+  .links{
+    width: fit-content;
+  }
+}
+
+@include devices(smallScreen){
+  @include menu;
+}

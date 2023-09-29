@@ -1,0 +1,114 @@
+.projects-container{
+  .links-projects{
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    // border: 1px solid $gradient_color-1;
+    li{
+      // margin: 0 .7rem;
+      padding: .5rem .7rem;
+      border: 1px solid $gradient_color-1;
+      color: $gradient_color-1;
+      transition: .3s;
+      cursor: pointer;
+      &:first-of-type{
+        border-radius: 10px 0 0 10px;
+      }
+      &:last-of-type{
+        border-radius: 0 10px 10px 0;
+      }
+      &.active{
+        background: rgba(133, 76, 230, 0.125)
+      }
+    }
+  }
+  .projects-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,330px);
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    .project{
+      // max-width: 330px;
+      border-radius: 10px;
+      padding: 1rem;
+      background-color: rgb(23, 23, 33);
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
+      transition: .3s;
+      &:hover{
+        transform: translateY(-10px);
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 50px 4px;
+        filter: brightness(1.1);
+      }
+      & > img{
+        width: 100%;
+        height: 330px;
+        
+      }
+      .tools{
+        display: flex;
+        flex-wrap: wrap;
+        margin: .5rem 0;
+        gap: .4rem;
+        li{
+          font-size: 12px;
+          font-weight: 400;
+          color: rgb(133, 76, 230);
+          background-color: rgba(133, 76, 230, 0.082);
+          padding: 2px 8px;
+          border-radius: 10px;
+        }
+      }
+      .project-name{
+        @include textStyle(20px,600,$white_color-1);
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 1rem;
+      }
+      .date{
+        @include textStyle(12px,400,$white_color-2);
+      }
+      .description{
+        margin-top: 1rem;
+        overflow: hidden;
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        @include textStyle(16px,400,$white_color-2);
+      }
+      .authers{
+        margin-top: .8rem;
+        img{
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          &:not(:first-of-type){
+            margin-left: .5rem;
+          }
+        }
+      }
+    }
+    
+  }
+  
+}
+
+@include devices(mobile){
+  .projects-container{
+    .links-projects{
+      li{
+        font-size: 10px;
+      }
+    }
+    .projects-cards{
+      grid-template-columns: repeat(auto-fill, 290px);
+    }
+  }
+}
